@@ -1,0 +1,117 @@
+<view bind:__l="__l">
+  <page-head title="{{title}}"></page-head>
+  <view>
+    <form data-event-opts="{{[['submit',[['searchOkay']]]]}}" bindsubmit="__e">
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">输入城市</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder="请输入城市名称如'广州'" name="title" data-event-opts="{{[['input',[['__set_model',['city','$event',[]]]]]]}}" value="{{city}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-padding-wrap">
+        <view class="uni-btn-v">
+          <button type="primary" formType="submit">转换</button>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">天气情况</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.weather','$event',[]]]]]]}}" value="{{weather.weather}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">日期</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.date','$event',[]]]]]]}}" value="{{weather.date}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">更新时间</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.time','$event',[]]]]]]}}" value="{{weather.time}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">温度</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.tem','$event',[]]]]]]}}" value="{{weather.tem}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">风向</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.win','$event',[]]]]]]}}" value="{{weather.win}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">风速等级</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.win_speed','$event',[]]]]]]}}" value="{{weather.win_speed}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">湿度</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.humidity','$event',[]]]]]]}}" value="{{weather.humidity}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">气压（hPa）</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.pressure','$event',[]]]]]]}}" value="{{weather.pressure}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">PM2.5</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.air_pm25','$event',[]]]]]]}}" value="{{weather.air_pm25}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">空气质量等级</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.air_level','$event',[]]]]]]}}" value="{{weather.air_level}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">空气质量描述</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.air_tips','$event',[]]]]]]}}" value="{{weather.air_tips}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view class="uni-list">
+        <view class="uni-list-cell">
+          <view class="uni-list-cell-left">空气指数</view>
+          <view class="uni-list-cell-db">
+            <input class="uni-input" type="text" placeholder=" " name="title" data-event-opts="{{[['input',[['__set_model',['weather.air','$event',[]]]]]]}}" value="{{weather.air}}" bindinput="__e" />
+          </view>
+        </view>
+      </view>
+      <view style="margin-bottom:20px;"></view>
+    </form>
+  </view>
+</view>

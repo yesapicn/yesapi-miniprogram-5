@@ -1,0 +1,29 @@
+<view bind:__l="__l">
+  <block wx:if="{{showSetTabBarPage}}">
+    <set-tab-bar data-event-opts="{{[['^unmount',[['leaveSetTabBarPage']]]]}}" bind:unmount="__e"></set-tab-bar>
+  </block>
+  <block wx:else>
+    <view class="uni-padding-wrap uni-common-pb">
+      <view class="uni-header-logo" style="width:80%;margin:auto;">
+        <image src="http://cdn7.okayapi.com/CEE4B8A091578B252AC4C92FB4E893C3_20190304213902_63f85e982adc8419feffd862e883581e.jpeg" mode="aspectFit"></image>
+      </view>
+      <view class="uni-hello-text uni-common-pb">天气查询小程序</view>
+      <block wx:for="{{lists}}" wx:for-item="list" wx:for-index="index" wx:key="index">
+        <view class="uni-card">
+          <view class="uni-list">
+            <view class="uni-list-cell uni-collapse">
+              <view class="{{['uni-list-cell-navigate uni-navigate-bottom',list.open?'uni-active':'']}}" hover-class="uni-list-cell-hover" data-event-opts="{{[['tap',[['triggerCollapse',[index]]]]]}}" bindtap="__e">{{''+list.name+''}}</view>
+              <view class="{{['uni-list uni-collapse',list.open?'uni-active':'']}}">
+                <block wx:for="{{list.pages}}" wx:for-item="item" wx:for-index="key" wx:key="key">
+                  <view class="uni-list-cell" hover-class="uni-list-cell-hover" url="{{item.url}}" data-event-opts="{{[['tap',[['goDetailPage',[item.url]]]]]}}" bindtap="__e">
+                    <view class="uni-list-cell-navigate uni-navigate-right">{{''+item.name}}</view>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

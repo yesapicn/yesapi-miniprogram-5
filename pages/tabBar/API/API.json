@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小白开放平台-天气查询",
+  "usingComponents": {
+    "set-tab-bar": "/components/api-set-tabbar"
+  }
+}

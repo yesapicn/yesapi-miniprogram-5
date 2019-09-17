@@ -1,0 +1,18 @@
+<view bind:__l="__l">
+  <page-head title="{{title}}"></page-head>
+  <view>
+    <form data-event-opts="{{[['submit',[['searchOkay']]]]}}" bindsubmit="__e">
+      <block wx:for="{{array}}" wx:for-item="item" wx:for-index="key" wx:key="key">
+        <view>
+          <view class="uni-list">
+            <view class="uni-list-cell">
+              <view class="uni-list-cell-left uni-badge-blue">{{''+item.title+'内云图'}}</view>
+            </view>
+          </view>
+          <image src="{{item.pic}}"></image>
+          <view style="margin-bottom:20px;"></view>
+        </view>
+      </block>
+    </form>
+  </view>
+</view>

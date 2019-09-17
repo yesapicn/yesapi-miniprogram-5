@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/tabBar/API/API",
+    "pages/API/Common_Weather/Common_Weather",
+    "pages/API/Common_Weather_LiveWeather/Common_Weather_LiveWeather",
+    "pages/API/Common_Weather_WeekWeather/Common_Weather_WeekWeather"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Hello uniapp",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {
+    "page-head": "/components/page-head",
+    "page-foot": "/components/page-foot"
+  }
+}
